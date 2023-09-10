@@ -7,3 +7,6 @@ NAME = "Integration blueprint"
 DOMAIN = "integration_blueprint"
 VERSION = "0.0.0"
 ATTRIBUTION = "Data provided by http://jsonplaceholder.typicode.com/"
+
+
+
