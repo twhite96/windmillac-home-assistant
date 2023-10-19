@@ -3,7 +3,7 @@ from __future__ import annotations
 
 import asyncio
 import socket
-
+import requests
 import aiohttp
 import async_timeout
 
@@ -30,18 +30,18 @@ class IntegrationBlueprintApiClient:
     def __init__(
         self,
         username: str,
-        password: str,
+        token: str,
         session: aiohttp.ClientSession,
     ) -> None:
         """Sample API Client."""
         self._username = username
-        self._password = password
+        self._token = token
         self._session = session
 
     async def async_get_data(self) -> any:
         """Get data from the API."""
         return await self._api_wrapper(
-            method="get", url="https://jsonplaceholder.typicode.com/posts/1"
+            method="get", url="https://blynk.cloud/external/api/"
         )
 
     async def async_set_title(self, value: str) -> any:
